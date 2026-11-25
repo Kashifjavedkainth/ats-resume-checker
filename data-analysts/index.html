@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATS Resume Checker for Data Analysts — Free Data Analyst ATS Score | No Signup</title>
+<meta name="description" content="Free ATS Resume Checker for Data Analysts in the USA. Check your data analyst resume against Greenhouse, Workday and Lever — SQL, Python, Tableau, Power BI, Data Visualization, Excel, Statistics, A/B Testing. No signup — your resume never leaves your browser.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+<header class="site"><div class="container">
+<a class="logo" href="../index.html">ATS <span>Resume Checker</span></a>
+<nav class="main"><a href="../index.html">Home</a><a href="../nurses/">Nurses</a><a href="../fresh-graduates/">Fresh Graduates</a><a href="../about.html">About</a><a href="../privacy.html">Privacy</a><a href="../contact.html">Contact</a></nav>
+</div></header>
+
+<section class="hero"><div class="container">
+<span class="badge">FREE • FOR DATA ANALYSTS • NO SIGNUP</span>
+<h1>ATS Resume Checker for Data Analysts</h1>
+<p>Hiring managers filter data analyst resumes by tools, techniques and business impact before a human reads your dashboard. The average data analyst resume scores only <strong>56</strong> — usually because it lists tools without a single business result. Check yours against Greenhouse, Workday and Lever in 30 seconds.</p>
+<p class="small" style="color:#dbeafe">Your resume never leaves your browser. All checking happens on your device.</p>
+</div></section>
+
+<main class="container">
+<div class="card" id="checker">
+<h2>Check your data analyst resume now</h2>
+<div class="steps">
+<div class="step"><span class="n">1</span><div><b>Paste your analyst resume</b><span>Tools, techniques & impact count.</span></div></div>
+<div class="step"><span class="n">2</span><div><b>Paste the analyst job post</b><span>SQL, Tableau & Power BI compared.</span></div></div>
+<div class="step"><span class="n">3</span><div><b>Get your analyst score</b><span>0–100 vs the average analyst score of 56.</span></div></div>
+</div>
+<label for="pdfFile">Upload a PDF resume (optional — text is extracted in your browser)</label>
+<input type="file" id="pdfFile" accept="application/pdf">
+<p id="pdfStatus" class="small muted"></p>
+<div class="grid2">
+<div><label for="resumeText">Your data analyst resume</label><textarea id="resumeText" placeholder="Paste your full resume text here…"></textarea><button class="btn secondary" id="loadSampleResume" type="button">Load sample analyst resume</button></div>
+<div><label for="jobText">Data analyst job description</label><textarea id="jobText" placeholder="Paste the job description here…"></textarea><button class="btn secondary" id="loadSampleJob" type="button">Load sample data analyst job</button></div>
+</div>
+<button class="btn" id="checkBtn" type="button">Check Analyst ATS Score →</button>
+<p class="privacy-note">🔒 Privacy: your resume is processed only in this browser tab. We do not upload, store, or sell it.</p>
+<div id="results" class="hidden">
+<div class="score-wrap"><div class="score-circle" id="scoreCircle"><span class="num" id="scoreNum">–</span><span class="lbl">/ 100</span></div><div><h3 style="margin:0 0 6px">Your analyst ATS score</h3><p id="verdict" class="muted"></p><p id="kwSummary" class="small"></p></div></div>
+<h3>Matched keywords</h3><div id="matchedList"></div>
+<h3>Missing keywords — add these if they are true for you</h3><div id="missingList"></div>
+<h3>Formatting checks</h3><ul class="check-list" id="checkList"></ul>
+</div>
+</div>
+
+<div class="card">
+<h2>Why data analyst resumes fail ATS — and what hiring managers search for</h2>
+<p>Analyst ATS systems (Greenhouse, Workday, Lever, iCIMS, Ashby) screen applications by tool (SQL, Python, Tableau, Power BI), technique (statistics, A/B testing, data cleaning) and business impact. A resume that says 'worked with data' scores far lower than one that says 'Built a Tableau dashboard in SQL and Python that cut weekly reporting time by 50%'. Name your tools, your techniques and the decision your work changed.</p>
+<h3>Top keywords this checker looks for</h3>
+<p>SQL, Python, Tableau, Power BI, Data Visualization, Microsoft Excel, Statistics, A/B Testing, Data Cleaning, Data Analysis, Business Intelligence, Dashboard Design, ETL, R, Pandas, Data Modeling, Reporting, Forecasting, Google Analytics, Machine Learning, Data Warehousing, Snowflake, Communication, Problem Solving.</p>
+<h3>Data analyst mistakes to avoid</h3>
+<ul>
+<li><strong>Tools without a business result:</strong> 'used SQL and Tableau' scores badly. 'Built a Tableau dashboard from SQL data that cut reporting time by 50%' scores well.</li>
+<li><strong>No statistics or testing named:</strong> statistics, A/B testing and forecasting are searched separately from SQL. Name the techniques you actually used.</li>
+<li><strong>Hiding your dashboards:</strong> put your portfolio and dashboard links as plain text near the top. Links hidden in icons or images are invisible to the parser.</li>
+<li><strong>Forgetting data cleaning:</strong> data cleaning and ETL are core analyst keywords. If you spent half your time cleaning data, say so.</li>
+<li><strong>One generic resume for every role:</strong> a business intelligence job and a product analytics job need different keyword emphasis. Tailor the top skills and project bullets for each posting.</li>
+<li><strong>Too much jargon, no story:</strong> 'leveraged synergies' means nothing to an ATS. Replace buzzwords with tools, techniques and numbers.</li>
+</ul>
+<p class="muted small">Benchmark: the average data analyst resume in our sample scores 56. A score of 75+ puts you well ahead of most applicants for the same posting.</p>
+</div>
+
+<div class="card">
+<h2>Also check</h2>
+<p><a href="../index.html">← Back to the main ATS Resume Checker</a> &nbsp;|&nbsp; <a href="../it-software-engineers/">ATS Checker for IT & Software Engineers →</a></p>
+</div>
+
+<div class="card">
+<h2>Frequently asked questions — data analysts</h2>
+<details><summary>Do I need Python and SQL both?</summary><p>Most US data analyst postings search for SQL first and Python second. If you know both, name both and show a project for each one — SQL for querying, Python with Pandas for analysis.</p></details>
+<details><summary>Should I include my Tableau or Power BI dashboards?</summary><p>Yes — as plain text links near the top of your resume, with 2–3 named dashboards. The ATS cannot click icons or read images, so the full URL must be written as text.</p></details>
+<details><summary>Is my resume stored anywhere?</summary><p>No. Checking happens only in your browser. Nothing is uploaded to a server.</p></details>
+</div>
+</main>
+
+<footer class="site"><div class="container">
+<p><a href="../index.html">Home</a><a href="../nurses/">Nurses</a><a href="../fresh-graduates/">Fresh Graduates</a><a href="../about.html">About</a><a href="../privacy.html">Privacy Policy</a><a href="../contact.html">Contact</a></p>
+<p class="small">ATS Resume Checker for Data Analysts — free tool for US job seekers. Scores are an estimate, not a guarantee of an interview.</p>
+<p class="small">© 2026 ATS Resume Checker. All rights reserved.</p>
+</div></footer>
+
+<script>
+window.ATS_CONFIG = {"keywords": ["SQL", "Python", "Tableau", "Power BI", "Data Visualization", "Microsoft Excel", "Statistics", "A/B Testing", "Data Cleaning", "Data Analysis", "Business Intelligence", "Dashboard Design", "ETL", "R", "Pandas", "Data Modeling", "Reporting", "Forecasting", "Google Analytics", "Machine Learning", "Data Warehousing", "Snowflake", "Communication", "Problem Solving"], "atsSystems": "Greenhouse, Workday, Lever, iCIMS, Ashby", "sampleJob": "Data Analyst — Seattle, WA (Full-time)\n\nWe are hiring a Data Analyst to turn product and sales data into decisions for our Seattle team.\n\nRequirements:\n- 2+ years of data analysis experience with SQL, Python and Microsoft Excel\n- Strong experience with Tableau, Power BI, data visualization and dashboard design\n- Experience with statistics, A/B Testing, data cleaning, ETL and data modeling\n- Experience with business intelligence, reporting, forecasting and data warehousing\n- Knowledge of R, Pandas, Google Analytics, machine learning and Snowflake\n- Strong communication and problem solving skills; able to explain results to non-technical teams\n- Bachelor's degree in Data Science, Statistics, Business or a related field", "sampleResume": "Alex Nguyen\nalex.nguyen@email.com, (206) 555-0123, Seattle, WA\nPortfolio: alexnguyen-data.com\n\nSUMMARY\nData Analyst with 3 years of experience in SQL, Python, Tableau and Power BI. Built dashboards and forecasting models that cut reporting time by 50% and improved campaign targeting by 25%.\n\nEXPERIENCE\nData Analyst — Bright Retail Analytics, Seattle, WA — 2022–2025\n- Built Tableau and Power BI dashboards with SQL and Python, using data visualization and dashboard design to cut weekly reporting time by 50%\n- Ran A/B Testing and statistics analysis on 10 campaigns, improving conversion by 18%\n- Led data cleaning and ETL pipelines for 5M+ rows, improving data quality by 30%\n- Built forecasting and data modeling in Python with Pandas, R and Snowflake data warehousing\n- Presented business intelligence reporting to senior managers, using communication and problem solving to turn data analysis into decisions\n- Used Microsoft Excel, Google Analytics and machine learning models for customer segmentation\n\nJunior Data Analyst — City Data Group, Seattle, WA — 2021–2022\n- Created reporting dashboards in Tableau and Power BI for 3 client teams\n- Performed data cleaning, data analysis and forecasting for monthly sales reports\n\nEDUCATION\nBachelor of Science in Data Science — University of Washington — 2021\n\nSKILLS\nSQL, Python, Tableau, Power BI, Data Visualization, Microsoft Excel, Statistics, A/B Testing, Data Cleaning, Data Analysis, Business Intelligence, Dashboard Design, ETL, R, Pandas, Data Modeling, Reporting, Forecasting, Google Analytics, Machine Learning, Data Warehousing, Snowflake, Communication, Problem Solving"};
+</script>
+<script src="../script.js"></script>
+</body>
+</html>
