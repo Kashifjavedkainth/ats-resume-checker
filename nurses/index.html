@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATS Resume Checker for Nurses USA — Free RN ATS Score | No Signup</title>
+<meta name="description" content="Free ATS Resume Checker for Nurses in the USA. Check your RN resume against hospital ATS systems Taleo, Workday and iCIMS. RN, BSN, NCLEX, Epic, Cerner, ICU, BLS, ACLS keywords, nurse-specific mistakes and a real sample ICU nurse job description. No signup — your resume never leaves your browser.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+<header class="site"><div class="container">
+<a class="logo" href="../index.html">ATS <span>Resume Checker</span></a>
+<nav class="main"><a href="../index.html">Home</a><a href="./">Nurses</a><a href="../fresh-graduates/">Fresh Graduates</a><a href="../about.html">About</a><a href="../privacy.html">Privacy</a><a href="../contact.html">Contact</a></nav>
+</div></header>
+
+<section class="hero"><div class="container">
+<span class="badge">FREE • FOR NURSES IN THE USA • NO SIGNUP</span>
+<h1>ATS Resume Checker for Nurses — USA</h1>
+<p>Hospitals filter nurse resumes by licence, unit and EHR system before a recruiter reads them. The average nurse resume scores only <strong>52</strong> — most are filtered out before a human sees them. Check yours against Taleo, Workday and iCIMS in 30 seconds.</p>
+<p class="small" style="color:#dbeafe">Your resume never leaves your browser. All checking happens on your device.</p>
+</div></section>
+
+<main class="container">
+<div class="card" id="checker">
+<h2>Check your nurse resume now</h2>
+<div class="steps">
+<div class="step"><span class="n">1</span><div><b>Paste your nurse resume</b><span>Licence, unit, EHR — all read in your browser.</span></div></div>
+<div class="step"><span class="n">2</span><div><b>Paste the hospital job post</b><span>RN, BSN, Epic, ICU keywords compared.</span></div></div>
+<div class="step"><span class="n">3</span><div><b>Get your nurse score</b><span>0–100 vs the average nurse score of 52.</span></div></div>
+</div>
+<label for="pdfFile">Upload a PDF resume (optional — text is extracted in your browser)</label>
+<input type="file" id="pdfFile" accept="application/pdf">
+<p id="pdfStatus" class="small muted"></p>
+<div class="grid2">
+<div><label for="resumeText">Your nurse resume</label><textarea id="resumeText" placeholder="Paste your full nurse resume text here…"></textarea><button class="btn secondary" id="loadSampleResume" type="button">Load sample nurse resume</button></div>
+<div><label for="jobText">Nurse job description</label><textarea id="jobText" placeholder="Paste the hospital job description here…"></textarea><button class="btn secondary" id="loadSampleJob" type="button">Load sample ICU nurse job</button></div>
+</div>
+<button class="btn" id="checkBtn" type="button">Check Nurse ATS Score →</button>
+<p class="privacy-note">🔒 Privacy: your resume is processed only in this browser tab. We do not upload, store, or sell it.</p>
+<div id="results" class="hidden">
+<div class="score-wrap"><div class="score-circle" id="scoreCircle"><span class="num" id="scoreNum">–</span><span class="lbl">/ 100</span></div><div><h3 style="margin:0 0 6px">Your nurse ATS score</h3><p id="verdict" class="muted"></p><p id="kwSummary" class="small"></p></div></div>
+<h3>Matched keywords</h3><div id="matchedList"></div>
+<h3>Missing keywords — add these if they are true for you</h3><div id="missingList"></div>
+<h3>Formatting checks</h3><ul class="check-list" id="checkList"></ul>
+</div>
+</div>
+
+<div class="card">
+<h2>Why nurse resumes fail ATS — and what hospitals search for</h2>
+<p>Hospital ATS systems (Taleo, Workday, iCIMS, Oracle HCM, HealthStream) use very structured keyword matching for nursing. Licensure (RN, BSN, NCLEX), unit type (ICU, ED, Med-Surg) and EHR system name (Epic, Cerner) are near-universal filters. Missing even 3–5 of these can drop your score below the recruiter's filter threshold.</p>
+<h3>Top keywords this checker looks for</h3>
+<p>RN, BSN, NCLEX, Patient Care, Clinical Assessment, Medication Administration, IV Therapy, Wound Care, EHR, Epic, Cerner, Meditech, BLS, ACLS, PALS, Triage, Discharge Planning, Patient Education, Care Coordination, ICU, Critical Care, Telemetry, Charge Nurse, HIPAA.</p>
+<h3>Nurse-specific mistakes to avoid</h3>
+<ul>
+<li><strong>Licence written only as an abbreviation:</strong> write “Registered Nurse (RN)” — write both forms. The abbreviation alone can miss full-phrase searches.</li>
+<li><strong>No unit named:</strong> “ICU / Med-Surg / ED” — recruiters search by unit. Name yours exactly.</li>
+<li><strong>No EHR named:</strong> Epic or Cerner experience is a real keyword, especially during system migrations.</li>
+<li><strong>Certifications buried in a text box:</strong> BLS and ACLS must appear as standard searchable text, not in a graphic or table.</li>
+<li><strong>No numbers:</strong> add patient ratios, e.g. “cared for 5–6 patients per shift in a 24-bed ICU”, and measurable outcomes.</li>
+<li><strong>Missing shift detail:</strong> add licence line, specialty keywords, shift and unit detail, and formatting a hospital ATS can read.</li>
+</ul>
+<p class="muted small">Benchmark: the average nurse resume in our sample scores 52. A score of 75+ puts you well ahead of most applicants for the same posting.</p>
+</div>
+
+<div class="card">
+<h2>Also check</h2>
+<p><a href="../index.html">← Back to the main ATS Resume Checker</a> &nbsp;|&nbsp; <a href="../fresh-graduates/">ATS Checker for Fresh Graduates →</a></p>
+</div>
+
+<div class="card">
+<h2>Frequently asked questions — nurses</h2>
+<details><summary>Do hospitals really use ATS for nurses?</summary><p>Yes. Large US hospital systems use Taleo, Workday, iCIMS and similar systems to screen the first round of nurse applications by licence, certifications, unit experience and EHR system.</p></details>
+<details><summary>Should I list both RN and Registered Nurse?</summary><p>Yes. Write “Registered Nurse (RN)” the first time, then use RN afterwards. That way both the full phrase and the abbreviation are searchable.</p></details>
+<details><summary>Is my resume stored anywhere?</summary><p>No. Checking happens only in your browser. Nothing is uploaded to a server.</p></details>
+</div>
+</main>
+
+<footer class="site"><div class="container">
+<p><a href="../index.html">Home</a><a href="./">Nurses</a><a href="../fresh-graduates/">Fresh Graduates</a><a href="../about.html">About</a><a href="../privacy.html">Privacy Policy</a><a href="../contact.html">Contact</a></p>
+<p class="small">ATS Resume Checker for Nurses USA — free tool for US job seekers. Scores are an estimate, not a guarantee of an interview.</p>
+<p class="small">© 2026 ATS Resume Checker. All rights reserved.</p>
+</div></footer>
+
+<script>
+window.ATS_CONFIG = {
+  keywords: ["RN","BSN","NCLEX","Patient Care","Clinical Assessment","Medication Administration","IV Therapy","Wound Care","EHR","Epic","Cerner","BLS","ACLS","PALS","Triage","ICU","Critical Care","Telemetry","Patient Education","Infection Control","Vital Signs","Care Coordination","Discharge Planning","HIPAA","Med-Surg"],
+  atsSystems: "Taleo, Workday, iCIMS, Oracle HCM, HealthStream",
+  sampleJob: "Registered Nurse — ICU, Night Shift — Houston, TX (Full-time)\n\nMemorial General Hospital is hiring a Registered Nurse for our 24-bed Intensive Care Unit, night shift, 7pm–7am, 3 shifts per week.\n\nRequirements:\n- Active RN license in Texas, BSN preferred; NCLEX passed\n- BLS and ACLS certification required; PALS preferred\n- 1+ years of ICU / critical care experience\n- Experience with Epic EHR, medication administration, IV therapy and telemetry monitoring\n- Strong clinical assessment, triage and patient education skills\n- Experience with wound care, infection control and care coordination\n- Ability to manage 5–6 critically ill patients per shift and document in Epic",
+  sampleResume: "Sarah Johnson, RN, BSN\nsarah.johnson@email.com | (713) 555-0182 | Houston, TX | RN License TX #123456\n\nSUMMARY\nRegistered Nurse (RN) with BSN and 3 years of ICU / critical care experience. Skilled in clinical assessment, medication administration, IV therapy, telemetry and Epic EHR documentation.\n\nLICENSES & CERTIFICATIONS\nRegistered Nurse (RN), Texas — BSN, University of Houston, 2022 — NCLEX passed 2022\nBLS, ACLS, PALS — American Heart Association, current\n\nEXPERIENCE\nRegistered Nurse — ICU, Memorial General Hospital, Houston, TX — 2022–2025\n- Provided patient care for 5–6 critically ill patients per shift in a 24-bed ICU\n- Performed clinical assessment, triage, vital signs monitoring and medication administration\n- Managed IV therapy, wound care and infection control following hospital protocols\n- Documented care plans, discharge planning and patient education in Epic EHR\n- Coordinated care with physicians, charge nurse and telemetry team; used Cerner in prior role\n\nStaff Nurse — Med-Surg, City Hospital, Houston, TX — 2021–2022\n- Delivered patient care on a 30-bed Med-Surg unit, including telemetry monitoring\n- Educated patients and families on discharge planning and medication administration\n\nEDUCATION\nBachelor of Science in Nursing (BSN) — University of Houston — 2021\n\nSKILLS\nPatient Care, Clinical Assessment, Medication Administration, IV Therapy, Wound Care, EHR, Epic, Cerner, BLS, ACLS, PALS, Triage, ICU, Critical Care, Telemetry, Patient Education, Infection Control, Vital Signs, Care Coordination, HIPAA"
+};
+</script>
+<script src="../script.js"></script>
+</body>
+</html>
