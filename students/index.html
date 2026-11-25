@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATS Resume Checker for Students — Free, Part-Time & Campus Jobs | No Signup</title>
+<meta name="description" content="Free ATS Resume Checker for Students in the USA. Check your student resume for part-time and campus jobs — coursework, volunteering, GPA, clubs and skills. No experience needed. No signup — your resume never leaves your browser.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+<header class="site"><div class="container">
+<a class="logo" href="../index.html">ATS <span>Resume Checker</span></a>
+<nav class="main"><a href="../index.html">Home</a><a href="../nurses/">Nurses</a><a href="../fresh-graduates/">Fresh Graduates</a><a href="../about.html">About</a><a href="../privacy.html">Privacy</a><a href="../contact.html">Contact</a></nav>
+</div></header>
+
+<section class="hero"><div class="container">
+<span class="badge">FREE • FOR STUDENTS IN THE USA • NO SIGNUP</span>
+<h1>ATS Resume Checker for Students — USA</h1>
+<p>Applying for a part-time or campus job while you study? Employers and campus hiring systems filter student resumes by coursework, volunteering and reliability before a human reads them. The average student resume scores only <strong>48</strong>. Check yours in 30 seconds and see exactly what to fix.</p>
+<p class="small" style="color:#dbeafe">Your resume never leaves your browser. All checking happens on your device.</p>
+</div></section>
+
+<main class="container">
+<div class="card" id="checker">
+<h2>Check your student resume now</h2>
+<div class="steps">
+<div class="step"><span class="n">1</span><div><b>Paste your student resume</b><span>Coursework, clubs & campus jobs count.</span></div></div>
+<div class="step"><span class="n">2</span><div><b>Paste the campus job post</b><span>Part-time & student keywords compared.</span></div></div>
+<div class="step"><span class="n">3</span><div><b>Get your student score</b><span>0–100 vs the average student score of 48.</span></div></div>
+</div>
+<label for="pdfFile">Upload a PDF resume (optional — text is extracted in your browser)</label>
+<input type="file" id="pdfFile" accept="application/pdf">
+<p id="pdfStatus" class="small muted"></p>
+<div class="grid2">
+<div><label for="resumeText">Your student resume</label><textarea id="resumeText" placeholder="Paste your full resume text here…"></textarea><button class="btn secondary" id="loadSampleResume" type="button">Load sample student resume</button></div>
+<div><label for="jobText">Campus job description</label><textarea id="jobText" placeholder="Paste the job description here…"></textarea><button class="btn secondary" id="loadSampleJob" type="button">Load sample campus job</button></div>
+</div>
+<button class="btn" id="checkBtn" type="button">Check Student ATS Score →</button>
+<p class="privacy-note">🔒 Privacy: your resume is processed only in this browser tab. We do not upload, store, or sell it.</p>
+<div id="results" class="hidden">
+<div class="score-wrap"><div class="score-circle" id="scoreCircle"><span class="num" id="scoreNum">–</span><span class="lbl">/ 100</span></div><div><h3 style="margin:0 0 6px">Your student ATS score</h3><p id="verdict" class="muted"></p><p id="kwSummary" class="small"></p></div></div>
+<h3>Matched keywords</h3><div id="matchedList"></div>
+<h3>Missing keywords — add these if they are true for you</h3><div id="missingList"></div>
+<h3>Formatting checks</h3><ul class="check-list" id="checkList"></ul>
+</div>
+</div>
+
+<div class="card">
+<h2>How student resumes pass ATS — with little or no work experience</h2>
+<p>Campus employers use the same ATS software as big companies — Workday, Taleo, iCIMS and Handshake. They do not expect years of experience from a student. They search for coursework that matches the job, volunteering and club roles that show reliability, and practical skills like cash handling, scheduling and customer service. A one-page resume that names these exactly will outrank a longer resume that hides them.</p>
+<h3>Top keywords this checker looks for</h3>
+<p>Campus Jobs, Part-Time Work, Coursework, Volunteering, GPA, Student Organizations, Tutoring, Retail Experience, Customer Service, Cash Handling, Time Management, Communication, Teamwork, Microsoft Office, Google Workspace, Social Media, Event Planning, Leadership, Research Assistant, Library Assistant, Food Service, Scheduling.</p>
+<h3>Student mistakes to avoid</h3>
+<ul>
+<li><strong>Leaving the resume almost empty:</strong> a student resume with only a name and a degree scores badly. Add coursework, clubs, volunteering and any part-time work — even babysitting or food service counts.</li>
+<li><strong>Listing high school only:</strong> once you are at university, lead with your university, degree and expected graduation year. High school belongs at the bottom, or not at all.</li>
+<li><strong>No GPA when it helps you:</strong> if your GPA is 3.5 or above, put it next to your degree. Below 3.5, leave it off and lead with coursework instead.</li>
+<li><strong>Forgetting campus jobs:</strong> library assistant, research assistant, campus ambassador and tutoring are real jobs. Give each one dates and 2–3 bullets with numbers.</li>
+<li><strong>No numbers anywhere:</strong> 'helped at events' scores badly. 'Helped plan 6 campus events for 200+ students' scores well.</li>
+<li><strong>Using a fancy template:</strong> two-column designs and graphics break ATS parsing. Use a clean single-column resume with standard headings.</li>
+</ul>
+<p class="muted small">Benchmark: the average student resume in our sample scores 48. A score of 75+ puts you well ahead of most applicants for the same campus or part-time posting.</p>
+</div>
+
+<div class="card">
+<h2>Also check</h2>
+<p><a href="../index.html">← Back to the main ATS Resume Checker</a> &nbsp;|&nbsp; <a href="../fresh-graduates/">ATS Checker for Fresh Graduates →</a></p>
+</div>
+
+<div class="card">
+<h2>Frequently asked questions — students</h2>
+<details><summary>Can I apply for a campus job with no experience?</summary><p>Yes. Campus employers expect students to have little or no work experience. Coursework, volunteering, clubs and part-time work can match most of the keywords in a campus job posting.</p></details>
+<details><summary>Should I include my GPA?</summary><p>Include it if it is 3.5 or above — it is a real keyword for many campus roles. If it is lower, leave it off and lead with relevant coursework and skills instead.</p></details>
+<details><summary>Do campus jobs count as real experience?</summary><p>Yes. Library assistant, research assistant, tutoring and campus ambassador roles all show reliability, communication and time management — the exact traits campus employers search for.</p></details>
+</div>
+</main>
+
+<footer class="site"><div class="container">
+<p><a href="../index.html">Home</a><a href="../nurses/">Nurses</a><a href="../fresh-graduates/">Fresh Graduates</a><a href="../about.html">About</a><a href="../privacy.html">Privacy Policy</a><a href="../contact.html">Contact</a></p>
+<p class="small">ATS Resume Checker for Students USA — free tool for US job seekers. Scores are an estimate, not a guarantee of an interview.</p>
+<p class="small">© 2026 ATS Resume Checker. All rights reserved.</p>
+</div></footer>
+
+<script>
+window.ATS_CONFIG = {"keywords": ["Campus Jobs", "Part-Time Work", "Coursework", "Volunteering", "GPA", "Student Organizations", "Tutoring", "Retail Experience", "Customer Service", "Cash Handling", "Time Management", "Communication", "Teamwork", "Microsoft Office", "Google Workspace", "Social Media", "Event Planning", "Leadership", "Research Assistant", "Library Assistant", "Food Service", "Scheduling"], "atsSystems": "Workday, Taleo, iCIMS, Handshake", "sampleJob": "Campus Assistant — Part-Time — Columbus, OH (On-campus, 15 hrs/week)\n\nOhio State University Campus Services is hiring a part-time Campus Assistant for the student centre, 15 hours per week, evenings and weekends.\n\nYou will greet visitors, answer questions, help with event planning, handle cash handling at the front desk, and keep the front desk organised.\n\nRequirements:\n- Current student, enrolled full-time, GPA 3.0 or above preferred\n- Customer service and communication skills; teamwork and time management\n- Experience with Microsoft Office and Google Workspace, social media a plus\n- Part-time work, volunteering, tutoring or student organizations experience welcome\n- Reliable scheduling, cash handling and food service experience a plus\n- Friendly, organised and able to work evenings and weekends", "sampleResume": "Jordan Lee\njordan.lee@email.com, (614) 555-0139, Columbus, OH\n\nSUMMARY\nSecond-year student at Ohio State University seeking a part-time campus job. Strong communication, teamwork and time management skills with experience in tutoring, volunteering and event planning.\n\nEDUCATION\nBachelor of Science, Psychology — Ohio State University — Expected 2028, GPA 3.6\nCoursework: Introduction to Psychology, Statistics, Communication Studies, Research Methods\n\nEXPERIENCE\nLibrary Assistant — Ohio State University Library, Columbus, OH — 2024–2025\n- Helped 30+ students per shift with research assistant tasks, book checkouts and scheduling\n- Organised study materials and kept the front desk running smoothly during evening shifts\n\nTutor — Campus Tutoring Centre, Columbus, OH — 2024–Present\n- Tutoring 12 students per week in statistics and psychology coursework\n- Improved student test scores by an average of 15% through weekly tutoring sessions\n\nVOLUNTEERING & ACTIVITIES\nVolunteering — Columbus Food Bank — 2023–Present\n- Served food service shifts for 100+ families per month as part of student organizations\n- Led event planning for 4 fundraising events, raising $2,000 for the food bank\n\nSKILLS\nCampus Jobs, Part-Time Work, Coursework, Volunteering, GPA, Student Organizations, Tutoring, Retail Experience, Customer Service, Cash Handling, Time Management, Communication, Teamwork, Microsoft Office, Google Workspace, Social Media, Event Planning, Leadership, Research Assistant, Library Assistant, Food Service, Scheduling"};
+</script>
+<script src="../script.js"></script>
+</body>
+</html>
