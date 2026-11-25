@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATS Resume Checker for IT & Software Engineers — Free Developer ATS Score | No Signup</title>
+<meta name="description" content="Free ATS Resume Checker for IT and Software Engineers in the USA. Check your developer resume against Greenhouse, Lever and Workday — Python, JavaScript, React, Node.js, AWS, SQL, Git, Docker, Kubernetes, Agile, CI/CD, REST APIs. No signup — your resume never leaves your browser.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+<header class="site"><div class="container">
+<a class="logo" href="../index.html">ATS <span>Resume Checker</span></a>
+<nav class="main"><a href="../index.html">Home</a><a href="../nurses/">Nurses</a><a href="../fresh-graduates/">Fresh Graduates</a><a href="../about.html">About</a><a href="../privacy.html">Privacy</a><a href="../contact.html">Contact</a></nav>
+</div></header>
+
+<section class="hero"><div class="container">
+<span class="badge">FREE • FOR SOFTWARE ENGINEERS • NO SIGNUP</span>
+<h1>ATS Resume Checker for IT & Software Engineers</h1>
+<p>Tech recruiters filter developer resumes by stack, tools and shipped results before a human reads a line of code. The average software engineer resume scores only <strong>58</strong> — usually because it lists every language ever touched and no measurable impact. Check yours against Greenhouse, Lever and Workday in 30 seconds.</p>
+<p class="small" style="color:#dbeafe">Your resume never leaves your browser. All checking happens on your device.</p>
+</div></section>
+
+<main class="container">
+<div class="card" id="checker">
+<h2>Check your software engineer resume now</h2>
+<div class="steps">
+<div class="step"><span class="n">1</span><div><b>Paste your engineer resume</b><span>Stack, tools & shipped results count.</span></div></div>
+<div class="step"><span class="n">2</span><div><b>Paste the engineering job post</b><span>Python, React, AWS & Agile compared.</span></div></div>
+<div class="step"><span class="n">3</span><div><b>Get your engineer score</b><span>0–100 vs the average engineer score of 58.</span></div></div>
+</div>
+<label for="pdfFile">Upload a PDF resume (optional — text is extracted in your browser)</label>
+<input type="file" id="pdfFile" accept="application/pdf">
+<p id="pdfStatus" class="small muted"></p>
+<div class="grid2">
+<div><label for="resumeText">Your software engineer resume</label><textarea id="resumeText" placeholder="Paste your full resume text here…"></textarea><button class="btn secondary" id="loadSampleResume" type="button">Load sample engineer resume</button></div>
+<div><label for="jobText">Software engineer job description</label><textarea id="jobText" placeholder="Paste the job description here…"></textarea><button class="btn secondary" id="loadSampleJob" type="button">Load sample software engineer job</button></div>
+</div>
+<button class="btn" id="checkBtn" type="button">Check Engineer ATS Score →</button>
+<p class="privacy-note">🔒 Privacy: your resume is processed only in this browser tab. We do not upload, store, or sell it.</p>
+<div id="results" class="hidden">
+<div class="score-wrap"><div class="score-circle" id="scoreCircle"><span class="num" id="scoreNum">–</span><span class="lbl">/ 100</span></div><div><h3 style="margin:0 0 6px">Your engineer ATS score</h3><p id="verdict" class="muted"></p><p id="kwSummary" class="small"></p></div></div>
+<h3>Matched keywords</h3><div id="matchedList"></div>
+<h3>Missing keywords — add these if they are true for you</h3><div id="missingList"></div>
+<h3>Formatting checks</h3><ul class="check-list" id="checkList"></ul>
+</div>
+</div>
+
+<div class="card">
+<h2>Why software engineer resumes fail ATS — and what tech recruiters search for</h2>
+<p>Engineering ATS systems (Greenhouse, Lever, Workday, Ashby, Gem) match your resume against the exact stack in the job posting. A resume that says 'worked with Python and React' scores lower than one that says 'Built a React dashboard with a Python API, cutting report time by 40%'. Name the stack, the tools and the measurable result — and keep your GitHub and portfolio links as plain text, not hidden in a graphic.</p>
+<h3>Top keywords this checker looks for</h3>
+<p>Python, JavaScript, React, Node.js, AWS, SQL, Git, Docker, Kubernetes, Agile, CI/CD, REST APIs, TypeScript, PostgreSQL, Microservices, Unit Testing, Code Review, System Design, Linux, Jenkins, Terraform, GraphQL, HTML, CSS, Debugging.</p>
+<h3>Software engineer mistakes to avoid</h3>
+<ul>
+<li><strong>Listing every language ever touched:</strong> a wall of 20 languages scores badly and looks dishonest. List the 5–8 you can actually use on the job, matching the posting.</li>
+<li><strong>No measurable impact:</strong> 'worked on the backend' tells the ATS nothing. 'Reduced API response time by 40% with PostgreSQL indexing' matches keywords and impresses humans.</li>
+<li><strong>Hiding your GitHub link:</strong> put your GitHub and portfolio URLs as plain text near the top. Links buried in icons or images are invisible to the parser.</li>
+<li><strong>No testing or DevOps keywords:</strong> most postings search for unit testing, CI/CD, Docker and code review. If you do them, name them explicitly.</li>
+<li><strong>One resume for every stack:</strong> a React job and a backend job need different keyword emphasis. Tailor the top skills and project bullets for each posting.</li>
+<li><strong>Fancy two-column layout:</strong> columns and skill bars scramble ATS reading order. Use a clean single-column resume with standard headings.</li>
+</ul>
+<p class="muted small">Benchmark: the average software engineer resume in our sample scores 58. A score of 75+ puts you well ahead of most applicants for the same posting.</p>
+</div>
+
+<div class="card">
+<h2>Also check</h2>
+<p><a href="../index.html">← Back to the main ATS Resume Checker</a> &nbsp;|&nbsp; <a href="../data-analysts/">ATS Checker for Data Analysts →</a></p>
+</div>
+
+<div class="card">
+<h2>Frequently asked questions — software engineers</h2>
+<details><summary>Should I list every programming language I know?</summary><p>No. List the languages and tools in the job posting that you can genuinely use, and show a project or result for each one. A short, honest stack beats a long, vague one.</p></details>
+<details><summary>Does my GitHub profile help with ATS?</summary><p>Only if the link is plain text on your resume. The ATS cannot click icons or read images, so write the full GitHub URL as text and name your best 2–3 repositories.</p></details>
+<details><summary>Is my resume stored anywhere?</summary><p>No. Checking happens only in your browser. Nothing is uploaded to a server.</p></details>
+</div>
+</main>
+
+<footer class="site"><div class="container">
+<p><a href="../index.html">Home</a><a href="../nurses/">Nurses</a><a href="../fresh-graduates/">Fresh Graduates</a><a href="../about.html">About</a><a href="../privacy.html">Privacy Policy</a><a href="../contact.html">Contact</a></p>
+<p class="small">ATS Resume Checker for IT & Software Engineers — free tool for US job seekers. Scores are an estimate, not a guarantee of an interview.</p>
+<p class="small">© 2026 ATS Resume Checker. All rights reserved.</p>
+</div></footer>
+
+<script>
+window.ATS_CONFIG = {"keywords": ["Python", "JavaScript", "React", "Node.js", "AWS", "SQL", "Git", "Docker", "Kubernetes", "Agile", "CI/CD", "REST APIs", "TypeScript", "PostgreSQL", "Microservices", "Unit Testing", "Code Review", "System Design", "Linux", "Jenkins", "Terraform", "GraphQL", "HTML", "CSS", "Debugging"], "atsSystems": "Greenhouse, Lever, Workday, Ashby, Gem", "sampleJob": "Software Engineer — Austin, TX (Remote-friendly, Full-time)\n\nWe are hiring a Software Engineer to build and scale our customer platform. You will work in an Agile team, ship features weekly, and own services end to end.\n\nRequirements:\n- 3+ years of software engineering experience with Python and JavaScript\n- Strong experience with React, TypeScript, Node.js and REST APIs\n- Experience with AWS, PostgreSQL, SQL, Docker and Kubernetes\n- Experience with Git, code review, unit testing and CI/CD with Jenkins\n- Knowledge of microservices, system design, GraphQL and Terraform\n- Experience with Linux, HTML, CSS and debugging production issues\n- Bachelor's degree in Computer Science or equivalent experience", "sampleResume": "Daniel Kim\ndaniel.kim@email.com, (512) 555-0174, Austin, TX\ngithub.com/danielkim-dev\n\nSUMMARY\nSoftware Engineer with 4 years of experience building web platforms with Python, JavaScript, React and Node.js. Shipped microservices on AWS used by 50,000+ users, with a focus on clean code, unit testing and CI/CD.\n\nEXPERIENCE\nSoftware Engineer — BrightTech, Austin, TX — 2022–2025\n- Built a React and TypeScript dashboard backed by Python REST APIs, cutting report generation time by 40%\n- Designed microservices on AWS with PostgreSQL and SQL queries, Docker and Kubernetes deployments\n- Led code review for a team of 5 engineers in an Agile team, improving unit testing coverage from 55% to 82%\n- Built a GraphQL layer over legacy REST APIs and automated deployments with Jenkins and Terraform\n- Debugged production issues on Linux servers, reducing downtime by 30%\n\nJunior Software Engineer — DataWorks, Austin, TX — 2021–2022\n- Developed Node.js services and HTML and CSS interfaces for internal tools\n- Wrote unit testing suites and contributed to system design documents\n\nEDUCATION\nBachelor of Science in Computer Science — University of Texas at Austin — 2021\n\nSKILLS\nPython, JavaScript, React, Node.js, AWS, SQL, Git, Docker, Kubernetes, Agile, CI/CD, REST APIs, TypeScript, PostgreSQL, Microservices, Unit Testing, Code Review, System Design, Linux, Jenkins, Terraform, GraphQL, HTML, CSS, Debugging"};
+</script>
+<script src="../script.js"></script>
+</body>
+</html>
