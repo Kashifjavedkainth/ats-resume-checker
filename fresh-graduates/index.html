@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATS Resume Checker for Fresh Graduates — Free, No Experience Needed | No Signup</title>
+<meta name="description" content="Free ATS Resume Checker for Fresh Graduates and students in the USA, UK and Canada. No work experience needed — check internships, university projects, coursework and skills in education-first format. Entry-level keywords, fresher mistakes and a real sample entry-level job description. No signup — your resume never leaves your browser.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+<header class="site"><div class="container">
+<a class="logo" href="../index.html">ATS <span>Resume Checker</span></a>
+<nav class="main"><a href="../index.html">Home</a><a href="../nurses/">Nurses</a><a href="../fresh-graduates/">Fresh Graduates</a><a href="../about.html">About</a><a href="../privacy.html">Privacy</a><a href="../contact.html">Contact</a></nav>
+</div></header>
+
+<section class="hero"><div class="container">
+<span class="badge">FREE • FOR STUDENTS &amp; FRESH GRADUATES • NO SIGNUP</span>
+<h1>ATS Resume Checker for Fresh Graduates</h1>
+<p>No full-time experience yet? That is normal — and an ATS can still rank you well if your resume leads with education, internships, university projects and skills. Check your graduate resume in 30 seconds, in education-first format.</p>
+<p class="small" style="color:#dbeafe">Your resume never leaves your browser. All checking happens on your device.</p>
+</div></section>
+
+<main class="container">
+<div class="card" id="checker">
+<h2>Check your graduate resume now</h2>
+<div class="steps">
+<div class="step"><span class="n">1</span><div><b>Paste your graduate resume</b><span>Education first — internships &amp; projects count.</span></div></div>
+<div class="step"><span class="n">2</span><div><b>Paste the entry-level job post</b><span>Internship &amp; skills keywords compared.</span></div></div>
+<div class="step"><span class="n">3</span><div><b>Get your graduate score</b><span>0–100, with fresher-specific fixes.</span></div></div>
+</div>
+<label for="pdfFile">Upload a PDF resume (optional — text is extracted in your browser)</label>
+<input type="file" id="pdfFile" accept="application/pdf">
+<p id="pdfStatus" class="small muted"></p>
+<div class="grid2">
+<div><label for="resumeText">Your graduate resume</label><textarea id="resumeText" placeholder="Paste your full resume text here…"></textarea><button class="btn secondary" id="loadSampleResume" type="button">Load sample graduate resume</button></div>
+<div><label for="jobText">Entry-level job description</label><textarea id="jobText" placeholder="Paste the entry-level job description here…"></textarea><button class="btn secondary" id="loadSampleJob" type="button">Load sample entry-level job</button></div>
+</div>
+<button class="btn" id="checkBtn" type="button">Check Graduate ATS Score →</button>
+<p class="privacy-note">🔒 Privacy: your resume is processed only in this browser tab. We do not upload, store, or sell it.</p>
+<div id="results" class="hidden">
+<div class="score-wrap"><div class="score-circle" id="scoreCircle"><span class="num" id="scoreNum">–</span><span class="lbl">/ 100</span></div><div><h3 style="margin:0 0 6px">Your graduate ATS score</h3><p id="verdict" class="muted"></p><p id="kwSummary" class="small"></p></div></div>
+<h3>Matched keywords</h3><div id="matchedList"></div>
+<h3>Missing keywords — add these if they are true for you</h3><div id="missingList"></div>
+<h3>Formatting checks</h3><ul class="check-list" id="checkList"></ul>
+</div>
+</div>
+
+<div class="card">
+<h2>How to write a graduate resume that passes ATS — with no experience</h2>
+<p>Put <strong>Education first</strong>, before Experience. Recruiters and ATS systems expect a graduate resume to lead with your degree, university, graduation year, GPA (only if 3.5 or above), relevant coursework and honours.</p>
+<h3>What to use instead of work experience</h3>
+<ul>
+<li><strong>Internships:</strong> even a 6-week internship counts. Give it the same format as a job — title, company, dates, 3 bullets with numbers.</li>
+<li><strong>University projects:</strong> name the project, the tools you used, and the result. Example: “Built a customer survey dashboard in Microsoft Excel and Google Sheets for 200 responses; presented findings to a class of 40.”</li>
+<li><strong>Coursework:</strong> list only courses that match the job — e.g. Marketing Research, Data Analysis, Financial Accounting — not every course you took.</li>
+<li><strong>Part-time and campus jobs:</strong> retail, tutoring, campus ambassador and volunteering all show teamwork, communication and time management.</li>
+<li><strong>Skills section:</strong> put the exact tools from the job posting — Microsoft Excel, Google Sheets, Canva, SQL, Python, customer service — if you can actually use them.</li>
+</ul>
+<h3>Top keywords this checker looks for</h3>
+<p>Internship, University Projects, Coursework, Microsoft Excel, Google Sheets, Data Analysis, Communication, Teamwork, Problem Solving, Time Management, Research, Presentation, Customer Service, Social Media, Canva, SQL, Python, Adaptability, Leadership, Volunteering, Academic Projects, Relevant Coursework.</p>
+<h3>Common fresher mistakes</h3>
+<ul>
+<li><strong>Leaving Experience blank:</strong> do not leave it empty — use internships, projects and part-time work instead.</li>
+<li><strong>Listing high school:</strong> once you have a university degree, remove high school. It wastes space and dates you.</li>
+<li><strong>No numbers:</strong> “helped with a project” scores badly. “Surveyed 200 students and increased club membership by 30%” scores well.</li>
+<li><strong>Objective instead of Summary:</strong> write a 2-line summary about what you can do for the employer, not what job you want.</li>
+<li><strong>Copying the job posting word for word:</strong> use the keywords, but describe your real experience in your own words. Recruiters can tell.</li>
+<li><strong>One page is enough:</strong> a graduate resume should be one page. Two pages with no experience looks empty.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Also check</h2>
+<p><a href="../index.html">← Back to the main ATS Resume Checker</a> &nbsp;|&nbsp; <a href="../nurses/">ATS Checker for Nurses USA →</a></p>
+</div>
+
+<div class="card">
+<h2>Frequently asked questions — fresh graduates</h2>
+<details><summary>I have no experience. Can I still pass ATS?</summary><p>Yes. ATS scores keywords and formatting, not years of experience alone. Internships, projects, coursework and skills can match most of the keywords in an entry-level posting.</p></details>
+<details><summary>Should Education go first?</summary><p>Yes, for a fresh graduate. Put Education at the top, then Projects / Internships, then Skills. Move Experience to the top only after you have 1–2 years of full-time work.</p></details>
+<details><summary>Is my resume stored anywhere?</summary><p>No. Checking happens only in your browser. Nothing is uploaded to a server.</p></details>
+</div>
+</main>
+
+<footer class="site"><div class="container">
+<p><a href="../index.html">Home</a><a href="../nurses/">Nurses</a><a href="../fresh-graduates/">Fresh Graduates</a><a href="../about.html">About</a><a href="../privacy.html">Privacy Policy</a><a href="../contact.html">Contact</a></p>
+<p class="small">ATS Resume Checker for Fresh Graduates — free tool for US, UK and Canadian job seekers. Scores are an estimate, not a guarantee of an interview.</p>
+<p class="small">© 2026 ATS Resume Checker. All rights reserved.</p>
+</div></footer>
+
+<script>
+window.ATS_CONFIG = {
+  keywords: ["Internship","University Projects","Coursework","Microsoft Excel","Google Sheets","Data Analysis","Communication","Teamwork","Problem Solving","Time Management","Research","Presentation","Customer Service","Social Media","Canva","SQL","Python","Adaptability","Leadership","Volunteering","Academic Projects","Relevant Coursework"],
+  atsSystems: "Workday, Greenhouse, Taleo, Lever",
+  sampleJob: "Junior Marketing Associate — Entry Level — New York, NY (Full-time)\n\nWe are hiring a Junior Marketing Associate, entry level, no prior full-time experience required. Recent graduates are encouraged to apply.\n\nYou will help with social media content, market research, data analysis in Microsoft Excel and Google Sheets, and support the marketing team with presentations and customer outreach.\n\nRequirements:\n- Bachelor's degree in Marketing, Business or a related field, 2024–2026 graduate\n- Internship, university projects or relevant coursework in marketing or data analysis\n- Strong communication, teamwork, problem solving and time management skills\n- Experience with Microsoft Excel, Google Sheets, Canva and social media\n- Research and presentation skills; SQL or Python is a plus\n- Willingness to learn, adaptability and attention to detail",
+  sampleResume: "Emma Carter\nemma.carter@email.com | (212) 555-0167 | New York, NY\n\nSUMMARY\nRecent marketing graduate with internship and university project experience in data analysis, social media and market research. Strong communication, teamwork and problem solving skills.\n\nEDUCATION\nBachelor of Arts in Marketing — New York University — 2025, GPA 3.6\nRelevant Coursework: Marketing Research, Data Analysis, Consumer Behaviour, Digital Marketing\n\nINTERNSHIP\nMarketing Intern — Bright Start Media, New York, NY — Jun 2024–Aug 2024\n- Created social media content in Canva for 3 client accounts, increasing engagement by 25%\n- Conducted market research on 200 survey responses using Microsoft Excel and Google Sheets\n- Prepared a presentation of findings for a team of 8 and supported customer service outreach\n\nUNIVERSITY PROJECTS\nCustomer Survey Dashboard — Academic Project, 2024\n- Built a dashboard in Microsoft Excel and Google Sheets for 200 survey responses\n- Analysed data, identified 3 key trends, and presented results to a class of 40\n\nCampus Ambassador — Volunteering, 2023–2025\n- Led a team of 5 volunteers, organised 4 campus events, and improved club membership by 30%\n\nSKILLS\nMicrosoft Excel, Google Sheets, Canva, Social Media, Data Analysis, Research, Presentation, Communication, Teamwork, Problem Solving, Time Management, Adaptability, Leadership, SQL, Python, Customer Service"
+};
+</script>
+<script src="../script.js"></script>
+</body>
+</html>
