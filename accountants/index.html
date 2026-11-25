@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATS Resume Checker for Accountants USA — Free Accountant ATS Score | No Signup</title>
+<meta name="description" content="Free ATS Resume Checker for Accountants in the USA. Check your accountant resume against Workday, Taleo and ADP — CPA, GAAP, QuickBooks, Excel, Financial Reporting, Auditing, Tax Preparation, Accounts Payable and Receivable. No signup — your resume never leaves your browser.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+<header class="site"><div class="container">
+<a class="logo" href="../index.html">ATS <span>Resume Checker</span></a>
+<nav class="main"><a href="../index.html">Home</a><a href="../nurses/">Nurses</a><a href="../fresh-graduates/">Fresh Graduates</a><a href="../about.html">About</a><a href="../privacy.html">Privacy</a><a href="../contact.html">Contact</a></nav>
+</div></header>
+
+<section class="hero"><div class="container">
+<span class="badge">FREE • FOR ACCOUNTANTS IN THE USA • NO SIGNUP</span>
+<h1>ATS Resume Checker for Accountants — USA</h1>
+<p>Finance teams filter accountant resumes by certification, software and close experience before a hiring manager reads them. The average accountant resume scores only <strong>57</strong> — usually because it lists duties without numbers and hides the CPA or QuickBooks experience. Check yours against Workday, Taleo and ADP in 30 seconds.</p>
+<p class="small" style="color:#dbeafe">Your resume never leaves your browser. All checking happens on your device.</p>
+</div></section>
+
+<main class="container">
+<div class="card" id="checker">
+<h2>Check your accountant resume now</h2>
+<div class="steps">
+<div class="step"><span class="n">1</span><div><b>Paste your accountant resume</b><span>CPA, GAAP & software count.</span></div></div>
+<div class="step"><span class="n">2</span><div><b>Paste the accounting job post</b><span>QuickBooks, Excel & close compared.</span></div></div>
+<div class="step"><span class="n">3</span><div><b>Get your accountant score</b><span>0–100 vs the average accountant score of 57.</span></div></div>
+</div>
+<label for="pdfFile">Upload a PDF resume (optional — text is extracted in your browser)</label>
+<input type="file" id="pdfFile" accept="application/pdf">
+<p id="pdfStatus" class="small muted"></p>
+<div class="grid2">
+<div><label for="resumeText">Your accountant resume</label><textarea id="resumeText" placeholder="Paste your full resume text here…"></textarea><button class="btn secondary" id="loadSampleResume" type="button">Load sample accountant resume</button></div>
+<div><label for="jobText">Accountant job description</label><textarea id="jobText" placeholder="Paste the job description here…"></textarea><button class="btn secondary" id="loadSampleJob" type="button">Load sample accountant job</button></div>
+</div>
+<button class="btn" id="checkBtn" type="button">Check Accountant ATS Score →</button>
+<p class="privacy-note">🔒 Privacy: your resume is processed only in this browser tab. We do not upload, store, or sell it.</p>
+<div id="results" class="hidden">
+<div class="score-wrap"><div class="score-circle" id="scoreCircle"><span class="num" id="scoreNum">–</span><span class="lbl">/ 100</span></div><div><h3 style="margin:0 0 6px">Your accountant ATS score</h3><p id="verdict" class="muted"></p><p id="kwSummary" class="small"></p></div></div>
+<h3>Matched keywords</h3><div id="matchedList"></div>
+<h3>Missing keywords — add these if they are true for you</h3><div id="missingList"></div>
+<h3>Formatting checks</h3><ul class="check-list" id="checkList"></ul>
+</div>
+</div>
+
+<div class="card">
+<h2>Why accountant resumes fail ATS — and what finance teams search for</h2>
+<p>Finance ATS systems (Workday, Taleo, iCIMS, ADP, Oracle HCM) screen accountant applications by certification (CPA), accounting standard (GAAP), software (QuickBooks, SAP, Oracle) and close experience. A resume that says 'did accounting' scores far lower than one that says 'Closed month-end in 3 days, reconciled 200+ accounts and cut reporting errors by 25%'. Name your certification, your software and your measurable results.</p>
+<h3>Top keywords this checker looks for</h3>
+<p>CPA, GAAP, QuickBooks, Microsoft Excel, Financial Reporting, Auditing, Tax Preparation, Accounts Payable, Accounts Receivable, General Ledger, Budgeting, Month-End Close, Payroll, Financial Analysis, Internal Controls, Reconciliation, Bookkeeping, ERP, SAP, Oracle, Cost Accounting, Forecasting, Compliance, Variance Analysis.</p>
+<h3>Accountant mistakes to avoid</h3>
+<ul>
+<li><strong>Hiding your CPA status:</strong> put 'CPA' or 'CPA candidate' at the top with the state. Recruiters filter by CPA first — if the parser cannot find it, you are out.</li>
+<li><strong>No software named:</strong> QuickBooks, SAP, Oracle and ERP are real keywords. Name every system you have actually used, with your level of experience.</li>
+<li><strong>Duties without numbers:</strong> 'handled accounts payable' scores badly. 'Processed 500+ accounts payable invoices per month with 99% accuracy' scores well.</li>
+<li><strong>Forgetting month-end close:</strong> month-end close, reconciliation and general ledger are core filters. If you have done them, say how fast and how accurately.</li>
+<li><strong>No tax or audit detail:</strong> tax preparation, auditing and compliance are searched separately. Name the tax types and audit work you have done.</li>
+<li><strong>A resume with no dates:</strong> every role and degree needs years. Missing dates make the parser — and the recruiter — distrust the timeline.</li>
+</ul>
+<p class="muted small">Benchmark: the average accountant resume in our sample scores 57. A score of 75+ puts you well ahead of most applicants for the same posting.</p>
+</div>
+
+<div class="card">
+<h2>Also check</h2>
+<p><a href="../index.html">← Back to the main ATS Resume Checker</a> &nbsp;|&nbsp; <a href="../marketing/">ATS Checker for Marketing Professionals →</a></p>
+</div>
+
+<div class="card">
+<h2>Frequently asked questions — accountants</h2>
+<details><summary>Do I need a CPA to pass ATS for accounting jobs?</summary><p>Not always — many staff accountant roles accept a bachelor's degree plus QuickBooks and Excel experience. But if you have a CPA, put it at the top: it is one of the strongest keywords in accounting.</p></details>
+<details><summary>Should I list QuickBooks and Excel separately?</summary><p>Yes. QuickBooks and Microsoft Excel are searched as separate keywords, so name both and say what you did with each one.</p></details>
+<details><summary>Is my resume stored anywhere?</summary><p>No. Checking happens only in your browser. Nothing is uploaded to a server.</p></details>
+</div>
+</main>
+
+<footer class="site"><div class="container">
+<p><a href="../index.html">Home</a><a href="../nurses/">Nurses</a><a href="../fresh-graduates/">Fresh Graduates</a><a href="../about.html">About</a><a href="../privacy.html">Privacy Policy</a><a href="../contact.html">Contact</a></p>
+<p class="small">ATS Resume Checker for Accountants USA — free tool for US job seekers. Scores are an estimate, not a guarantee of an interview.</p>
+<p class="small">© 2026 ATS Resume Checker. All rights reserved.</p>
+</div></footer>
+
+<script>
+window.ATS_CONFIG = {"keywords": ["CPA", "GAAP", "QuickBooks", "Microsoft Excel", "Financial Reporting", "Auditing", "Tax Preparation", "Accounts Payable", "Accounts Receivable", "General Ledger", "Budgeting", "Month-End Close", "Payroll", "Financial Analysis", "Internal Controls", "Reconciliation", "Bookkeeping", "ERP", "SAP", "Oracle", "Cost Accounting", "Forecasting", "Compliance", "Variance Analysis"], "atsSystems": "Workday, Taleo, iCIMS, ADP, Oracle HCM", "sampleJob": "Staff Accountant — Chicago, IL (Full-time)\n\nWe are hiring a Staff Accountant to own month-end close, financial reporting and reconciliation for our Chicago office.\n\nRequirements:\n- Bachelor's degree in Accounting; CPA or CPA candidate preferred\n- 2+ years of accounting experience with GAAP, general ledger and month-end close\n- Strong Microsoft Excel skills and experience with QuickBooks and ERP systems\n- Experience with accounts payable, accounts receivable, payroll and bookkeeping\n- Experience with financial reporting, financial analysis, budgeting and forecasting\n- Knowledge of auditing, internal controls, tax preparation and compliance\n- Experience with reconciliation, variance analysis and cost accounting; SAP or Oracle a plus", "sampleResume": "James Miller, CPA\njames.miller@email.com, (312) 555-0198, Chicago, IL\n\nSUMMARY\nCPA with 4 years of experience in financial reporting, month-end close and auditing. Skilled in GAAP, QuickBooks, Microsoft Excel and ERP systems, with a record of clean closes and accurate reporting.\n\nCERTIFICATIONS\nCertified Public Accountant (CPA), Illinois — 2023\n\nEXPERIENCE\nStaff Accountant — Bright Finance Group, Chicago, IL — 2022–2025\n- Owned month-end close for a $12M business, closing the general ledger in 3 days each month\n- Prepared financial reporting, budgeting and forecasting packs for senior management\n- Performed reconciliation of 200+ accounts, cutting reporting errors by 25%\n- Managed accounts payable and accounts receivable, processing 500+ invoices per month\n- Ran payroll for 80 employees and supported tax preparation and compliance filings\n- Strengthened internal controls and supported external auditing with clean results\n\nJunior Accountant — City Books, Chicago, IL — 2021–2022\n- Handled bookkeeping, cost accounting and variance analysis in QuickBooks and Microsoft Excel\n- Assisted with financial analysis and month-end close using SAP and Oracle ERP systems\n\nEDUCATION\nBachelor of Science in Accounting — University of Illinois Chicago — 2021\n\nSKILLS\nCPA, GAAP, QuickBooks, Microsoft Excel, Financial Reporting, Auditing, Tax Preparation, Accounts Payable, Accounts Receivable, General Ledger, Budgeting, Month-End Close, Payroll, Financial Analysis, Internal Controls, Reconciliation, Bookkeeping, ERP, SAP, Oracle, Cost Accounting, Forecasting, Compliance, Variance Analysis"};
+</script>
+<script src="../script.js"></script>
+</body>
+</html>
