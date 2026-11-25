@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATS Resume Checker for Teachers USA — Free Teacher ATS Score | No Signup</title>
+<meta name="description" content="Free ATS Resume Checker for Teachers in the USA. Check your teacher resume against Frontline, AppliTrack and Taleo — Teaching License, Classroom Management, Lesson Planning, Curriculum, IEP, Google Classroom, State Standards. No signup — your resume never leaves your browser.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+<header class="site"><div class="container">
+<a class="logo" href="../index.html">ATS <span>Resume Checker</span></a>
+<nav class="main"><a href="../index.html">Home</a><a href="../nurses/">Nurses</a><a href="../fresh-graduates/">Fresh Graduates</a><a href="../about.html">About</a><a href="../privacy.html">Privacy</a><a href="../contact.html">Contact</a></nav>
+</div></header>
+
+<section class="hero"><div class="container">
+<span class="badge">FREE • FOR TEACHERS IN THE USA • NO SIGNUP</span>
+<h1>ATS Resume Checker for Teachers — USA</h1>
+<p>School districts filter teacher resumes by licence, grade level and curriculum before a principal ever reads them. The average teacher resume scores only <strong>55</strong> — usually because it hides the licence, the grade and the measurable student results. Check yours against Frontline, AppliTrack and Taleo in 30 seconds.</p>
+<p class="small" style="color:#dbeafe">Your resume never leaves your browser. All checking happens on your device.</p>
+</div></section>
+
+<main class="container">
+<div class="card" id="checker">
+<h2>Check your teacher resume now</h2>
+<div class="steps">
+<div class="step"><span class="n">1</span><div><b>Paste your teacher resume</b><span>Licence, grade & curriculum count.</span></div></div>
+<div class="step"><span class="n">2</span><div><b>Paste the teaching job post</b><span>Licence, IEP & Google Classroom compared.</span></div></div>
+<div class="step"><span class="n">3</span><div><b>Get your teacher score</b><span>0–100 vs the average teacher score of 55.</span></div></div>
+</div>
+<label for="pdfFile">Upload a PDF resume (optional — text is extracted in your browser)</label>
+<input type="file" id="pdfFile" accept="application/pdf">
+<p id="pdfStatus" class="small muted"></p>
+<div class="grid2">
+<div><label for="resumeText">Your teacher resume</label><textarea id="resumeText" placeholder="Paste your full resume text here…"></textarea><button class="btn secondary" id="loadSampleResume" type="button">Load sample teacher resume</button></div>
+<div><label for="jobText">Teacher job description</label><textarea id="jobText" placeholder="Paste the job description here…"></textarea><button class="btn secondary" id="loadSampleJob" type="button">Load sample teacher job</button></div>
+</div>
+<button class="btn" id="checkBtn" type="button">Check Teacher ATS Score →</button>
+<p class="privacy-note">🔒 Privacy: your resume is processed only in this browser tab. We do not upload, store, or sell it.</p>
+<div id="results" class="hidden">
+<div class="score-wrap"><div class="score-circle" id="scoreCircle"><span class="num" id="scoreNum">–</span><span class="lbl">/ 100</span></div><div><h3 style="margin:0 0 6px">Your teacher ATS score</h3><p id="verdict" class="muted"></p><p id="kwSummary" class="small"></p></div></div>
+<h3>Matched keywords</h3><div id="matchedList"></div>
+<h3>Missing keywords — add these if they are true for you</h3><div id="missingList"></div>
+<h3>Formatting checks</h3><ul class="check-list" id="checkList"></ul>
+</div>
+</div>
+
+<div class="card">
+<h2>Why teacher resumes fail ATS — and what districts search for</h2>
+<p>District ATS systems (Frontline, AppliTrack, Taleo, Workday, SchoolSpring) screen teacher applications by teaching license, grade level, subject and curriculum keywords. A resume that says 'taught kids' scores far lower than one that says 'Taught Grade 3 reading with differentiated instruction, raising reading scores by 18%'. Name your licence, your grade, your tools — Google Classroom, IEP, state standards — and your measurable results.</p>
+<h3>Top keywords this checker looks for</h3>
+<p>Teaching License, Classroom Management, Lesson Planning, Curriculum Development, IEP, Special Education, Google Classroom, State Standards, Differentiated Instruction, Student Assessment, Parent Communication, Behavior Management, Elementary Education, Reading Instruction, Math Instruction, ESL, Professional Development, Collaboration, Data-Driven Instruction, Literacy, STEM, Substitute Teaching, CPR, First Aid.</p>
+<h3>Teacher mistakes to avoid</h3>
+<ul>
+<li><strong>Hiding your teaching license:</strong> put your teaching license, state and expiry at the top. Districts filter by licence first — if the parser cannot find it, you are out.</li>
+<li><strong>No grade or subject named:</strong> 'teacher' is too vague. Write 'Grade 3 Elementary Education teacher, Reading Instruction and Math Instruction' so the search matches.</li>
+<li><strong>No measurable student results:</strong> 'helped students learn' scores badly. 'Raised Grade 3 reading scores by 18% with differentiated instruction' scores well.</li>
+<li><strong>Forgetting IEP and special education:</strong> if you have IEP or special education experience, name it. Districts search for it constantly and it is a rare keyword.</li>
+<li><strong>No tools listed:</strong> Google Classroom, student assessment tools and data-driven instruction are real keywords. List the tools you actually use.</li>
+<li><strong>A resume longer than two pages:</strong> keep a teacher resume to 1–2 pages. Long resumes with no numbers look padded to both the ATS and the principal.</li>
+</ul>
+<p class="muted small">Benchmark: the average teacher resume in our sample scores 55. A score of 75+ puts you well ahead of most applicants for the same posting.</p>
+</div>
+
+<div class="card">
+<h2>Also check</h2>
+<p><a href="../index.html">← Back to the main ATS Resume Checker</a> &nbsp;|&nbsp; <a href="../students/">ATS Checker for Students →</a></p>
+</div>
+
+<div class="card">
+<h2>Frequently asked questions — teachers</h2>
+<details><summary>Do school districts really use ATS?</summary><p>Yes. Most large US districts use Frontline, AppliTrack or Taleo to screen the first round of teacher applications by licence, grade, subject and certifications.</p></details>
+<details><summary>Should I include my teaching license number?</summary><p>Include the licence type, state and subject — e.g. 'Colorado Teaching License, Elementary Education K–6'. You do not need to print the full licence number on a public resume.</p></details>
+<details><summary>Is my resume stored anywhere?</summary><p>No. Checking happens only in your browser. Nothing is uploaded to a server.</p></details>
+</div>
+</main>
+
+<footer class="site"><div class="container">
+<p><a href="../index.html">Home</a><a href="../nurses/">Nurses</a><a href="../fresh-graduates/">Fresh Graduates</a><a href="../about.html">About</a><a href="../privacy.html">Privacy Policy</a><a href="../contact.html">Contact</a></p>
+<p class="small">ATS Resume Checker for Teachers USA — free tool for US job seekers. Scores are an estimate, not a guarantee of an interview.</p>
+<p class="small">© 2026 ATS Resume Checker. All rights reserved.</p>
+</div></footer>
+
+<script>
+window.ATS_CONFIG = {"keywords": ["Teaching License", "Classroom Management", "Lesson Planning", "Curriculum Development", "IEP", "Special Education", "Google Classroom", "State Standards", "Differentiated Instruction", "Student Assessment", "Parent Communication", "Behavior Management", "Elementary Education", "Reading Instruction", "Math Instruction", "ESL", "Professional Development", "Collaboration", "Data-Driven Instruction", "Literacy", "STEM", "Substitute Teaching", "CPR", "First Aid"], "atsSystems": "Frontline, AppliTrack, Taleo, Workday, SchoolSpring", "sampleJob": "Elementary Teacher — Grade 3 — Denver, CO (Full-time)\n\nDenver Public Schools is hiring an Elementary Teacher for Grade 3 at Lincoln Elementary for the 2026–27 school year.\n\nRequirements:\n- Valid Colorado Teaching License in Elementary Education K–6\n- Experience with lesson planning, curriculum development and classroom management\n- Experience with differentiated instruction, student assessment and data-driven instruction\n- Experience with IEP plans and special education collaboration\n- Knowledge of state standards in reading instruction, math instruction and literacy\n- Experience with Google Classroom, parent communication and behavior management\n- ESL endorsement or experience preferred; CPR and First Aid certification a plus\n- Bachelor's degree in Elementary Education or a related field", "sampleResume": "Maria Rodriguez\nmaria.rodriguez@email.com, (303) 555-0112, Denver, CO\n\nSUMMARY\nElementary Education teacher with 5 years of experience in Grade 3, specialising in reading instruction, math instruction and differentiated instruction. Colorado Teaching License, Elementary Education K–6.\n\nLICENSES & CERTIFICATIONS\nColorado Teaching License, Elementary Education K–6 — valid to 2027\nCPR and First Aid certified, 2024\n\nEXPERIENCE\nGrade 3 Teacher — Lincoln Elementary, Denver, CO — 2021–2025\n- Taught Grade 3 reading instruction and math instruction to 24 students using lesson planning and curriculum development aligned to state standards\n- Used differentiated instruction and data-driven instruction to raise reading scores by 18% in one school year\n- Managed classroom management and behavior management for a diverse class, including IEP and special education students\n- Used Google Classroom for assignments, student assessment and parent communication\n- Led literacy and STEM projects and collaborated with ESL teachers on student support\n\nSubstitute Teaching — Denver Public Schools, Denver, CO — 2020–2021\n- Covered Grade 1–5 classes, delivering lesson planning and classroom management across schools\n- Completed professional development in behavior management and collaboration\n\nEDUCATION\nBachelor of Arts in Elementary Education — University of Colorado Denver — 2020\n\nSKILLS\nTeaching License, Classroom Management, Lesson Planning, Curriculum Development, IEP, Special Education, Google Classroom, State Standards, Differentiated Instruction, Student Assessment, Parent Communication, Behavior Management, Elementary Education, Reading Instruction, Math Instruction, ESL, Professional Development, Collaboration, Data-Driven Instruction, Literacy, STEM, Substitute Teaching, CPR, First Aid"};
+</script>
+<script src="../script.js"></script>
+</body>
+</html>
