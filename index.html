@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATS Resume Checker — Free ATS Score for US Jobs | No Signup</title>
+<meta name="description" content="Free ATS Resume Checker for US jobs. Paste your resume and the job description, get an instant ATS score 0–100, matched and missing keywords, and formatting fixes. No signup, no upload to a server — your resume never leaves your browser.">
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+<header class="site"><div class="container">
+<a class="logo" href="index.html">ATS <span>Resume Checker</span></a>
+<nav class="main"><a href="index.html">Home</a><a href="nurses/">Nurses</a><a href="fresh-graduates/">Fresh Graduates</a><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></nav>
+</div></header>
+
+<section class="hero"><div class="container">
+<span class="badge">FREE • NO SIGNUP • NO UPLOAD TO A SERVER</span>
+<h1>ATS Resume Checker <span class="grad">for US Jobs</span></h1>
+<p>Over 90% of large US employers filter resumes with an Applicant Tracking System before a human ever sees them. Check yours in 30 seconds — get your ATS score, missing keywords, and exactly what to fix.</p>
+<div class="trust-row"><span class="trust">✓ <b>100% Free</b></span><span class="trust">✓ <b>No Signup</b></span><span class="trust">✓ <b>Private</b> — nothing leaves your browser</span></div>
+<div class="stats">
+<div class="stat"><span class="num">90%+</span><span class="lbl">of large US employers use ATS</span></div>
+<div class="stat"><span class="num">30 sec</span><span class="lbl">to get your ATS score</span></div>
+<div class="stat"><span class="num">0–100</span><span class="lbl">score, keywords &amp; fixes</span></div>
+</div>
+<p class="small" style="color:#dbeafe">Your resume never leaves your browser. All checking happens on your device.</p>
+</div></section>
+
+<main class="container">
+<div class="card" id="checker">
+<h2>Check your resume now</h2>
+<div class="steps">
+<div class="step"><span class="n">1</span><div><b>Paste your resume</b><span>Or upload a PDF — text is read in your browser.</span></div></div>
+<div class="step"><span class="n">2</span><div><b>Paste the job description</b><span>Keywords are pulled from the real posting.</span></div></div>
+<div class="step"><span class="n">3</span><div><b>Get your score</b><span>0–100, matched &amp; missing keywords, fixes.</span></div></div>
+</div>
+
+<label for="pdfFile">Upload a PDF resume (optional — text is extracted in your browser)</label>
+<input type="file" id="pdfFile" accept="application/pdf">
+<p id="pdfStatus" class="small muted"></p>
+
+<div class="grid2">
+<div>
+<label for="resumeText">Your resume</label>
+<textarea id="resumeText" placeholder="Paste your full resume text here…"></textarea>
+<button class="btn secondary" id="loadSampleResume" type="button">Load sample resume</button>
+</div>
+<div>
+<label for="jobText">Job description</label>
+<textarea id="jobText" placeholder="Paste the full job description here…"></textarea>
+<button class="btn secondary" id="loadSampleJob" type="button">Load sample job description</button>
+</div>
+</div>
+
+<button class="btn" id="checkBtn" type="button">Check ATS Score →</button>
+<p class="privacy-note">🔒 Privacy: your resume is processed only in this browser tab. We do not upload, store, or sell it.</p>
+
+<div id="results" class="hidden">
+<div class="score-wrap">
+<div class="score-circle" id="scoreCircle"><span class="num" id="scoreNum">–</span><span class="lbl">/ 100</span></div>
+<div><h3 style="margin:0 0 6px">Your ATS score</h3><p id="verdict" class="muted"></p><p id="kwSummary" class="small"></p></div>
+</div>
+<h3>Matched keywords</h3>
+<div id="matchedList"></div>
+<h3>Missing keywords — add these if they are true for you</h3>
+<div id="missingList"></div>
+<h3>Formatting checks</h3>
+<ul class="check-list" id="checkList"></ul>
+</div>
+</div>
+
+<div class="card">
+<h2>How the ATS reads your resume</h2>
+<p>An ATS parses your resume as plain text, searches for the keywords in the job posting, and scores how well you match. Fancy templates, tables, columns, icons and text boxes often break that parsing — so a clean, single-column resume with standard headings scores higher.</p>
+<p>Our checker simulates that process: it compares your resume against the job description, checks the keywords employers actually search for, and checks the formatting the major US systems — Workday, Greenhouse, Taleo, iCIMS and Lever — need to read your resume correctly.</p>
+</div>
+
+<div class="card">
+<h2>Checkers by role — built for that job, not generic</h2>
+<p class="muted">The same tool, tuned for each audience. Pick your role for role-specific keywords, a real sample job description, and the mistakes people in that role make most.</p>
+<div class="niche-grid">
+<div class="niche-card nurse"><div class="icon">✚</div><h3>ATS Checker for Nurses — USA</h3><p>RN, BSN, NCLEX, Epic, Cerner, ICU, BLS and ACLS. Hospital ATS systems Taleo, Workday and iCIMS.</p><p><a href="nurses/">Check a nurse resume →</a></p></div>
+<div class="niche-card grad"><div class="icon">🎓</div><h3>ATS Checker for Fresh Graduates</h3><p>No experience? No problem. Internships, university projects, coursework and skills — in education-first format.</p><p><a href="fresh-graduates/">Check a graduate resume →</a></p></div>
+</div>
+</div>
+
+<div class="card">
+<h2>Common ATS mistakes</h2>
+<ul>
+<li><strong>Missing keywords:</strong> if the job asks for “data analysis” and your resume only says “worked with data”, the ATS may not count it. Use the exact words from the posting.</li>
+<li><strong>Creative headings:</strong> “My Journey” instead of “Experience” confuses the parser. Use Experience, Education, Skills.</li>
+<li><strong>Tables and columns:</strong> two-column designs and tables often scramble the reading order.</li>
+<li><strong>No dates:</strong> every job and degree needs years, e.g. 2022–2025.</li>
+<li><strong>One resume for every job:</strong> tailor the keywords for each posting. It takes 10 minutes and doubles your interview rate for many roles.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Frequently asked questions</h2>
+<details><summary>Is this ATS checker really free?</summary><p>Yes. The basic check is free, with no signup and no credit card. Your resume is checked in your browser.</p></details>
+<details><summary>Do you store my resume?</summary><p>No. The text you paste or the PDF you upload is processed only in your browser tab. It is never sent to our server, because there is no server for this tool.</p></details>
+<details><summary>What is a good ATS score?</summary><p>75 or above is strong for most jobs. 50–74 means fix the missing keywords first. Below 50, rewrite the resume around the job description before you apply.</p></details>
+<details><summary>Which ATS systems do you simulate?</summary><p>The checks are based on how Workday, Greenhouse, Taleo, iCIMS and Lever parse resumes: plain text, standard headings, keyword matching and date parsing.</p></details>
+</div>
+</main>
+
+<footer class="site"><div class="container">
+<p><a href="index.html">Home</a><a href="nurses/">Nurses</a><a href="fresh-graduates/">Fresh Graduates</a><a href="about.html">About</a><a href="privacy.html">Privacy Policy</a><a href="contact.html">Contact</a></p>
+<p class="small">ATS Resume Checker — a free tool for US, UK, Canadian and European job seekers. Scores are an estimate to help you improve your resume, not a guarantee of an interview.</p>
+<p class="small">© 2026 ATS Resume Checker. All rights reserved.</p>
+</div></footer>
+
+<script>
+window.ATS_CONFIG = {
+  keywords: ["Communication","Teamwork","Problem Solving","Leadership","Project Management","Data Analysis","Microsoft Excel","Customer Service","Time Management","Adaptability","Attention to Detail","Collaboration","Organization","Analytical Skills","Microsoft Office"],
+  atsSystems: "Workday, Greenhouse, Taleo, iCIMS, Lever",
+  sampleJob: "Customer Service Associate — Chicago, IL (Full-time)\n\nWe are hiring a Customer Service Associate to support our US customers by phone, email and chat. You will resolve customer questions, document cases in our CRM, and work with the team to improve satisfaction.\n\nRequirements:\n- 1+ years of customer service experience\n- Excellent communication and problem solving skills\n- Experience with CRM software and Microsoft Excel\n- Strong attention to detail and time management\n- Ability to work in a fast-paced team environment\n- High school diploma required; associate degree preferred",
+  sampleResume: "Alex Morgan\nalex.morgan@email.com | (312) 555-0148 | Chicago, IL\n\nSUMMARY\nCustomer-focused Customer Service Associate with 3 years of experience resolving customer issues by phone, email and chat. Strong communication, problem solving and teamwork skills.\n\nEXPERIENCE\nCustomer Service Associate — Bright Retail, Chicago, IL — 2022–2025\n- Resolved 40+ customer inquiries per day by phone, email and chat, improving customer satisfaction\n- Documented cases in CRM software and followed up until resolution\n- Used Microsoft Excel to track weekly issues and report trends to the team\n- Trained 2 new team members on communication and customer service standards\n\nCustomer Support Representative — City Services, Chicago, IL — 2021–2022\n- Answered customer questions and solved billing problems with attention to detail\n- Worked in a fast-paced team environment and met daily response targets\n\nEDUCATION\nAssociate Degree in Business Administration — Chicago Community College — 2021\n\nSKILLS\nCommunication, Teamwork, Problem Solving, Customer Service, Microsoft Excel, Microsoft Office, Time Management, Adaptability, Data Analysis, CRM Software"
+};
+</script>
+<script src="script.js"></script>
+</body>
+</html>
