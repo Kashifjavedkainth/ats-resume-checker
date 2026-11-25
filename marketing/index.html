@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATS Resume Checker for Marketing Professionals — Free Marketer ATS Score | No Signup</title>
+<meta name="description" content="Free ATS Resume Checker for Marketing Professionals in the USA. Check your marketing resume against Greenhouse, Lever and Workday — SEO, Content Marketing, Google Analytics, Social Media, Email Marketing, HubSpot, Campaign Management. No signup — your resume never leaves your browser.">
+<link rel="stylesheet" href="../styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+<header class="site"><div class="container">
+<a class="logo" href="../index.html">ATS <span>Resume Checker</span></a>
+<nav class="main"><a href="../index.html">Home</a><a href="../nurses/">Nurses</a><a href="../fresh-graduates/">Fresh Graduates</a><a href="../about.html">About</a><a href="../privacy.html">Privacy</a><a href="../contact.html">Contact</a></nav>
+</div></header>
+
+<section class="hero"><div class="container">
+<span class="badge">FREE • FOR MARKETING PROFESSIONALS • NO SIGNUP</span>
+<h1>ATS Resume Checker for Marketing Professionals</h1>
+<p>Marketing recruiters filter resumes by channel, tool and campaign results before a human reads your portfolio. The average marketing resume scores only <strong>54</strong> — usually because it lists channels without numbers and hides the tools. Check yours against Greenhouse, Lever and Workday in 30 seconds.</p>
+<p class="small" style="color:#dbeafe">Your resume never leaves your browser. All checking happens on your device.</p>
+</div></section>
+
+<main class="container">
+<div class="card" id="checker">
+<h2>Check your marketing resume now</h2>
+<div class="steps">
+<div class="step"><span class="n">1</span><div><b>Paste your marketing resume</b><span>Channels, tools & results count.</span></div></div>
+<div class="step"><span class="n">2</span><div><b>Paste the marketing job post</b><span>SEO, HubSpot & campaigns compared.</span></div></div>
+<div class="step"><span class="n">3</span><div><b>Get your marketing score</b><span>0–100 vs the average marketing score of 54.</span></div></div>
+</div>
+<label for="pdfFile">Upload a PDF resume (optional — text is extracted in your browser)</label>
+<input type="file" id="pdfFile" accept="application/pdf">
+<p id="pdfStatus" class="small muted"></p>
+<div class="grid2">
+<div><label for="resumeText">Your marketing resume</label><textarea id="resumeText" placeholder="Paste your full resume text here…"></textarea><button class="btn secondary" id="loadSampleResume" type="button">Load sample marketing resume</button></div>
+<div><label for="jobText">Marketing job description</label><textarea id="jobText" placeholder="Paste the job description here…"></textarea><button class="btn secondary" id="loadSampleJob" type="button">Load sample marketing job</button></div>
+</div>
+<button class="btn" id="checkBtn" type="button">Check Marketing ATS Score →</button>
+<p class="privacy-note">🔒 Privacy: your resume is processed only in this browser tab. We do not upload, store, or sell it.</p>
+<div id="results" class="hidden">
+<div class="score-wrap"><div class="score-circle" id="scoreCircle"><span class="num" id="scoreNum">–</span><span class="lbl">/ 100</span></div><div><h3 style="margin:0 0 6px">Your marketing ATS score</h3><p id="verdict" class="muted"></p><p id="kwSummary" class="small"></p></div></div>
+<h3>Matched keywords</h3><div id="matchedList"></div>
+<h3>Missing keywords — add these if they are true for you</h3><div id="missingList"></div>
+<h3>Formatting checks</h3><ul class="check-list" id="checkList"></ul>
+</div>
+</div>
+
+<div class="card">
+<h2>Why marketing resumes fail ATS — and what recruiters search for</h2>
+<p>Marketing ATS systems (Greenhouse, Lever, Workday, JazzHR, BambooHR) screen applications by channel (SEO, social media, email marketing), tool (HubSpot, Google Analytics, Google Ads) and measurable campaign results. A resume that says 'did social media' scores far lower than one that says 'Grew Instagram engagement by 45% and generated 1,200 leads with a HubSpot email campaign'. Name your channels, your tools and your numbers.</p>
+<h3>Top keywords this checker looks for</h3>
+<p>SEO, Content Marketing, Google Analytics, Social Media Marketing, Email Marketing, HubSpot, Campaign Management, Digital Marketing, Brand Management, PPC, Google Ads, Marketing Automation, Copywriting, Market Research, Lead Generation, Conversion Rate Optimization, A/B Testing, WordPress, Canva, Adobe Creative Suite, Influencer Marketing, Analytics, CRM, Marketing Strategy.</p>
+<h3>Marketing mistakes to avoid</h3>
+<ul>
+<li><strong>Channels without numbers:</strong> 'managed social media' scores badly. 'Grew LinkedIn followers by 60% and generated 1,200 leads' scores well.</li>
+<li><strong>No tools named:</strong> HubSpot, Google Analytics, Google Ads and WordPress are real keywords. List every tool you have actually used.</li>
+<li><strong>Hiding your portfolio:</strong> put your portfolio and campaign links as plain text near the top. Links hidden in icons or images are invisible to the parser.</li>
+<li><strong>Forgetting SEO and analytics:</strong> SEO, analytics and conversion rate optimization are searched separately from social media. Name them all if you do them.</li>
+<li><strong>One generic resume for every role:</strong> an SEO job and a social media job need different keyword emphasis. Tailor the top skills and campaign bullets for each posting.</li>
+<li><strong>Buzzwords instead of results:</strong> 'results-driven marketer' means nothing to an ATS. Replace buzzwords with channels, tools and numbers.</li>
+</ul>
+<p class="muted small">Benchmark: the average marketing resume in our sample scores 54. A score of 75+ puts you well ahead of most applicants for the same posting.</p>
+</div>
+
+<div class="card">
+<h2>Also check</h2>
+<p><a href="../index.html">← Back to the main ATS Resume Checker</a> &nbsp;|&nbsp; <a href="../data-analysts/">ATS Checker for Data Analysts →</a></p>
+</div>
+
+<div class="card">
+<h2>Frequently asked questions — marketing professionals</h2>
+<details><summary>Should I include my portfolio link?</summary><p>Yes — as plain text near the top of your resume, with 2–3 named campaigns. The ATS cannot click icons or read images, so the full URL must be written as text.</p></details>
+<details><summary>Is social media experience enough for a marketing job?</summary><p>It helps, but most postings also search for SEO, email marketing, Google Analytics and campaign management. Show at least two channels plus a tool like HubSpot.</p></details>
+<details><summary>Is my resume stored anywhere?</summary><p>No. Checking happens only in your browser. Nothing is uploaded to a server.</p></details>
+</div>
+</main>
+
+<footer class="site"><div class="container">
+<p><a href="../index.html">Home</a><a href="../nurses/">Nurses</a><a href="../fresh-graduates/">Fresh Graduates</a><a href="../about.html">About</a><a href="../privacy.html">Privacy Policy</a><a href="../contact.html">Contact</a></p>
+<p class="small">ATS Resume Checker for Marketing Professionals — free tool for US job seekers. Scores are an estimate, not a guarantee of an interview.</p>
+<p class="small">© 2026 ATS Resume Checker. All rights reserved.</p>
+</div></footer>
+
+<script>
+window.ATS_CONFIG = {"keywords": ["SEO", "Content Marketing", "Google Analytics", "Social Media Marketing", "Email Marketing", "HubSpot", "Campaign Management", "Digital Marketing", "Brand Management", "PPC", "Google Ads", "Marketing Automation", "Copywriting", "Market Research", "Lead Generation", "Conversion Rate Optimization", "A/B Testing", "WordPress", "Canva", "Adobe Creative Suite", "Influencer Marketing", "Analytics", "CRM", "Marketing Strategy"], "atsSystems": "Greenhouse, Lever, Workday, JazzHR, BambooHR", "sampleJob": "Digital Marketing Specialist — Miami, FL (Full-time)\n\nWe are hiring a Digital Marketing Specialist to own SEO, content marketing and paid campaigns for our Miami brand.\n\nRequirements:\n- 2+ years of digital marketing experience with SEO, content marketing and social media marketing\n- Strong experience with Google Analytics, Google Ads, PPC and HubSpot\n- Experience with email marketing, marketing automation, CRM and campaign management\n- Experience with copywriting, market research, lead generation and conversion rate optimization\n- Knowledge of A/B Testing, WordPress, Canva, Adobe Creative Suite and brand management\n- Experience with influencer marketing, analytics and marketing strategy\n- Bachelor's degree in Marketing or a related field", "sampleResume": "Sofia Patel\nsofia.patel@email.com, (305) 555-0146, Miami, FL\nPortfolio: sofiapatel-marketing.com\n\nSUMMARY\nDigital Marketing Specialist with 3 years of experience in SEO, content marketing and social media marketing. Grew organic traffic by 80% and generated 1,200+ leads with HubSpot campaigns.\n\nEXPERIENCE\nDigital Marketing Specialist — Bright Coast Media, Miami, FL — 2022–2025\n- Owned SEO and content marketing, growing organic traffic by 80% in 12 months\n- Ran Google Ads and PPC campaigns with a $5,000 monthly budget, cutting cost per lead by 30%\n- Built email marketing flows in HubSpot with marketing automation, generating 1,200 leads\n- Managed social media marketing across Instagram and LinkedIn, growing engagement by 45%\n- Ran A/B Testing on landing pages, improving conversion rate optimization by 22%\n- Used Google Analytics, WordPress and Canva for reporting, copywriting and brand management\n\nMarketing Assistant — City Events, Miami, FL — 2021–2022\n- Supported campaign management, market research and influencer marketing for 10 events\n- Created content in Adobe Creative Suite and managed CRM lists for lead generation\n\nEDUCATION\nBachelor of Arts in Marketing — University of Miami — 2021\n\nSKILLS\nSEO, Content Marketing, Google Analytics, Social Media Marketing, Email Marketing, HubSpot, Campaign Management, Digital Marketing, Brand Management, PPC, Google Ads, Marketing Automation, Copywriting, Market Research, Lead Generation, Conversion Rate Optimization, A/B Testing, WordPress, Canva, Adobe Creative Suite, Influencer Marketing, Analytics, CRM, Marketing Strategy"};
+</script>
+<script src="../script.js"></script>
+</body>
+</html>
