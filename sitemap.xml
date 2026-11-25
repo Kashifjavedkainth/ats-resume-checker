@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://ats-resume-checker.kashifjavedkainth.workers.dev/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://ats-resume-checker.kashifjavedkainth.workers.dev/nurses/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ats-resume-checker.kashifjavedkainth.workers.dev/fresh-graduates/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ats-resume-checker.kashifjavedkainth.workers.dev/students/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ats-resume-checker.kashifjavedkainth.workers.dev/it-software-engineers/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ats-resume-checker.kashifjavedkainth.workers.dev/teachers/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ats-resume-checker.kashifjavedkainth.workers.dev/accountants/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ats-resume-checker.kashifjavedkainth.workers.dev/marketing/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ats-resume-checker.kashifjavedkainth.workers.dev/data-analysts/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ats-resume-checker.kashifjavedkainth.workers.dev/about.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://ats-resume-checker.kashifjavedkainth.workers.dev/privacy.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://ats-resume-checker.kashifjavedkainth.workers.dev/contact.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+</urlset>
